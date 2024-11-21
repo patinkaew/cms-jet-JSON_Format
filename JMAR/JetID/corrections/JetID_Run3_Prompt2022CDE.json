@@ -1,0 +1,988 @@
+{
+    "schema_version": 2,
+    "description": "Jet Identification Criteria for Run3 Prompt2022CDE from https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV",
+    "corrections": [
+        {
+            "name": "JetID_Run3_Prompt2022CDE_TightLeptonVeto_AK4PFPuppi",
+            "description": "AK4PFPuppi Jet Identification TightLeptonVeto Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "abs(eta)",
+                    "type": "real",
+                    "description": "absolute value of pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "chEmEF",
+                    "type": "real",
+                    "description": "charged Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "muEF",
+                    "type": "real",
+                    "description": "muon Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "binning",
+                "input": "abs(eta)",
+                "edges": [
+                    0.0,
+                    2.6,
+                    2.7,
+                    3.0,
+                    5.0
+                ],
+                "content": [
+                    {
+                        "nodetype": "binning",
+                        "input": "chHEF",
+                        "edges": [
+                            0.0,
+                            0.01,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neHEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "chEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.8,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "neEmEF",
+                                                "edges": [
+                                                    0.0,
+                                                    0.9,
+                                                    1.0
+                                                ],
+                                                "content": [
+                                                    {
+                                                        "nodetype": "binning",
+                                                        "input": "muEF",
+                                                        "edges": [
+                                                            0.0,
+                                                            0.8,
+                                                            1.0
+                                                        ],
+                                                        "content": [
+                                                            {
+                                                                "nodetype": "binning",
+                                                                "input": "chMultiplicity",
+                                                                "edges": [
+                                                                    0.0,
+                                                                    1.0,
+                                                                    Infinity
+                                                                ],
+                                                                "content": [
+                                                                    0.0,
+                                                                    {
+                                                                        "nodetype": "binning",
+                                                                        "input": "multiplicity",
+                                                                        "edges": [
+                                                                            0.0,
+                                                                            2.0,
+                                                                            Infinity
+                                                                        ],
+                                                                        "content": [
+                                                                            0.0,
+                                                                            1.0
+                                                                        ],
+                                                                        "flow": "error"
+                                                                    }
+                                                                ],
+                                                                "flow": "error"
+                                                            },
+                                                            0.0
+                                                        ],
+                                                        "flow": "error"
+                                                    },
+                                                    0.0
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "chEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.8,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.99,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "muEF",
+                                                "edges": [
+                                                    0.0,
+                                                    0.8,
+                                                    1.0
+                                                ],
+                                                "content": [
+                                                    1.0,
+                                                    0.0
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9999,
+                            1.0
+                        ],
+                        "content": [
+                            1.0,
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neEmEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neMultiplicity",
+                                "edges": [
+                                    0.0,
+                                    3.0,
+                                    Infinity
+                                ],
+                                "content": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    }
+                ],
+                "flow": "error"
+            }
+        },
+        {
+            "name": "JetID_Run3_Prompt2022CDE_Tight_AK4PFPuppi",
+            "description": "AK4PFPuppi Jet Identification Tight Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "abs(eta)",
+                    "type": "real",
+                    "description": "absolute value of pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "binning",
+                "input": "abs(eta)",
+                "edges": [
+                    0.0,
+                    2.6,
+                    2.7,
+                    3.0,
+                    5.0
+                ],
+                "content": [
+                    {
+                        "nodetype": "binning",
+                        "input": "chHEF",
+                        "edges": [
+                            0.0,
+                            0.01,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neHEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.9,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "chMultiplicity",
+                                                "edges": [
+                                                    0.0,
+                                                    1.0,
+                                                    Infinity
+                                                ],
+                                                "content": [
+                                                    0.0,
+                                                    {
+                                                        "nodetype": "binning",
+                                                        "input": "multiplicity",
+                                                        "edges": [
+                                                            0.0,
+                                                            2.0,
+                                                            Infinity
+                                                        ],
+                                                        "content": [
+                                                            0.0,
+                                                            1.0
+                                                        ],
+                                                        "flow": "error"
+                                                    }
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.99,
+                                    1.0
+                                ],
+                                "content": [
+                                    1.0,
+                                    0.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9999,
+                            1.0
+                        ],
+                        "content": [
+                            1.0,
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neEmEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neMultiplicity",
+                                "edges": [
+                                    0.0,
+                                    3.0,
+                                    Infinity
+                                ],
+                                "content": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    }
+                ],
+                "flow": "error"
+            }
+        },
+        {
+            "name": "JetID_Run3_Prompt2022CDE_TightLeptonVeto_AK4PFCHS",
+            "description": "AK4PFCHS Jet Identification TightLeptonVeto Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "abs(eta)",
+                    "type": "real",
+                    "description": "absolute value of pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "chEmEF",
+                    "type": "real",
+                    "description": "charged Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "muEF",
+                    "type": "real",
+                    "description": "muon Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "binning",
+                "input": "abs(eta)",
+                "edges": [
+                    0.0,
+                    2.6,
+                    2.7,
+                    3.0,
+                    5.0
+                ],
+                "content": [
+                    {
+                        "nodetype": "binning",
+                        "input": "chHEF",
+                        "edges": [
+                            0.0,
+                            0.01,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neHEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "chEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.8,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "neEmEF",
+                                                "edges": [
+                                                    0.0,
+                                                    0.9,
+                                                    1.0
+                                                ],
+                                                "content": [
+                                                    {
+                                                        "nodetype": "binning",
+                                                        "input": "muEF",
+                                                        "edges": [
+                                                            0.0,
+                                                            0.8,
+                                                            1.0
+                                                        ],
+                                                        "content": [
+                                                            {
+                                                                "nodetype": "binning",
+                                                                "input": "chMultiplicity",
+                                                                "edges": [
+                                                                    0.0,
+                                                                    1.0,
+                                                                    Infinity
+                                                                ],
+                                                                "content": [
+                                                                    0.0,
+                                                                    {
+                                                                        "nodetype": "binning",
+                                                                        "input": "multiplicity",
+                                                                        "edges": [
+                                                                            0.0,
+                                                                            2.0,
+                                                                            Infinity
+                                                                        ],
+                                                                        "content": [
+                                                                            0.0,
+                                                                            1.0
+                                                                        ],
+                                                                        "flow": "error"
+                                                                    }
+                                                                ],
+                                                                "flow": "error"
+                                                            },
+                                                            0.0
+                                                        ],
+                                                        "flow": "error"
+                                                    },
+                                                    0.0
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "chEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.8,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.99,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "muEF",
+                                                "edges": [
+                                                    0.0,
+                                                    0.8,
+                                                    1.0
+                                                ],
+                                                "content": [
+                                                    {
+                                                        "nodetype": "binning",
+                                                        "input": "chMultiplicity",
+                                                        "edges": [
+                                                            0.0,
+                                                            1.0,
+                                                            Infinity
+                                                        ],
+                                                        "content": [
+                                                            0.0,
+                                                            1.0
+                                                        ],
+                                                        "flow": "error"
+                                                    },
+                                                    0.0
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neEmEF",
+                        "edges": [
+                            0.0,
+                            0.99,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neMultiplicity",
+                                "edges": [
+                                    0.0,
+                                    2.0,
+                                    Infinity
+                                ],
+                                "content": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.2,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neMultiplicity",
+                                        "edges": [
+                                            0.0,
+                                            11.0,
+                                            Infinity
+                                        ],
+                                        "content": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    }
+                ],
+                "flow": "error"
+            }
+        },
+        {
+            "name": "JetID_Run3_Prompt2022CDE_Tight_AK4PFCHS",
+            "description": "AK4PFCHS Jet Identification Tight Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "abs(eta)",
+                    "type": "real",
+                    "description": "absolute value of pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "binning",
+                "input": "abs(eta)",
+                "edges": [
+                    0.0,
+                    2.6,
+                    2.7,
+                    3.0,
+                    5.0
+                ],
+                "content": [
+                    {
+                        "nodetype": "binning",
+                        "input": "chHEF",
+                        "edges": [
+                            0.0,
+                            0.01,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neHEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neEmEF",
+                                        "edges": [
+                                            0.0,
+                                            0.9,
+                                            1.0
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "chMultiplicity",
+                                                "edges": [
+                                                    0.0,
+                                                    1.0,
+                                                    Infinity
+                                                ],
+                                                "content": [
+                                                    0.0,
+                                                    {
+                                                        "nodetype": "binning",
+                                                        "input": "multiplicity",
+                                                        "edges": [
+                                                            0.0,
+                                                            2.0,
+                                                            Infinity
+                                                        ],
+                                                        "content": [
+                                                            0.0,
+                                                            1.0
+                                                        ],
+                                                        "flow": "error"
+                                                    }
+                                                ],
+                                                "flow": "error"
+                                            },
+                                            0.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.9,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.99,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "chMultiplicity",
+                                        "edges": [
+                                            0.0,
+                                            1.0,
+                                            Infinity
+                                        ],
+                                        "content": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neEmEF",
+                        "edges": [
+                            0.0,
+                            0.99,
+                            1.0
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "binning",
+                                "input": "neMultiplicity",
+                                "edges": [
+                                    0.0,
+                                    2.0,
+                                    Infinity
+                                ],
+                                "content": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "flow": "error"
+                            },
+                            0.0
+                        ],
+                        "flow": "error"
+                    },
+                    {
+                        "nodetype": "binning",
+                        "input": "neHEF",
+                        "edges": [
+                            0.0,
+                            0.2,
+                            1.0
+                        ],
+                        "content": [
+                            0.0,
+                            {
+                                "nodetype": "binning",
+                                "input": "neEmEF",
+                                "edges": [
+                                    0.0,
+                                    0.9,
+                                    1.0
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "input": "neMultiplicity",
+                                        "edges": [
+                                            0.0,
+                                            11.0,
+                                            Infinity
+                                        ],
+                                        "content": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "flow": "error"
+                                    },
+                                    0.0
+                                ],
+                                "flow": "error"
+                            }
+                        ],
+                        "flow": "error"
+                    }
+                ],
+                "flow": "error"
+            }
+        }
+    ]
+}
