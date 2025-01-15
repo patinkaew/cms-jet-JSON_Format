@@ -1,60 +1,67 @@
 import correctionlib
 import correctionlib.schemav2 as schema
 import rich
+import json
 import numpy as np
 import gzip
 
 comparison_operators = [">=", "<=", ">", "<"]
 
 variable_information_dict = {
-    "abs(eta)": {
+    "eta": {
+        "description": "pseudorapidity of the jet",
+        "type": "real",
+        "range": (-np.inf, np.inf), # cannot use upperbound 5.0 since correctionlib will use [-5.0, 5.0), disallowing input=5.0
+    },
+    "abs_eta": {
         "description": "absolute value of pseudorapidity of the jet",
         "type": "real",
-        "range": (0.0, 5.0),
+        "range": (0.0, np.inf), # cannot use upperbound 5.0 since correctionlib will use [0.0, 5.0), disallowing input=5.0
     },
     "chHEF": {
         "description": "charged Hadron Energy Fraction",
         "type": "real",
-        "range": (0.0, 1.0),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "neHEF": {
         "description": "neutral Hadron Energy Fraction",
         "type": "real",
-        "range": (0.0, 1.0),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "chEmEF": {
         "description": "charged Electromagnetic Energy Fraction",
         "type": "real",
-        "range": (0.0, 1.0),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "neEmEF": {
         "description": "neutral Electromagnetic Energy Fraction",
         "type": "real",
-        "range": (0.0, 1.0),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "muEF": {
         "description": "muon Energy Fraction",
         "type": "real",
-        "range": (0.0, 1.0),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "chMultiplicity": {
         "description": "charged Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "neMultiplicity": {
         "description": "neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
     "multiplicity": {
         "description": "charged Multiplicity + neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
+        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
     },
 }
 
-variable_ordering = ["abs(eta)", "chHEF", "neHEF", "chEmEF", "neEmEF", "muEF", "chMultiplicity", "neMultiplicity", "multiplicity"]
+# eta and abs_eta should not be used together
+variable_ordering = ["eta", "abs_eta", "chHEF", "neHEF", "chEmEF", "neEmEF", "muEF", "chMultiplicity", "neMultiplicity", "multiplicity"]
 
 legacy_to_nanoaod_name_map = {
     "CHF": "chHEF",
@@ -133,16 +140,24 @@ def create_unit_jetId_correction(string_expression, valid_content=1):
     elif comparison_operator == ">" or comparison_operator == ">=":
         content = [0.0, valid_content]
 
+    def inf2str(value):
+        if np.isposinf(value):
+            return "+inf"
+        elif np.isneginf(value):
+            return "-inf"
+        return value
+
     return schema.Binning(
         nodetype = "binning",
         input = var_name,
-        edges = [var_min_value, var_threshold_value, var_max_value],
+        edges = [inf2str(var_min_value), var_threshold_value, inf2str(var_max_value)],
         flow = "error",
         content = content,
     )
 
 # create a JetID correction for one working point (e.g. Tight, TightLeptonVeto) and one era
 def create_jetId_correction(eta_bin_edges, criteria_expressions,
+                            input_abs_eta=False, # whether to use eta (False) or absolute eta (True) as input. If using eta (False), transform node to apply absolute value will be added 
                             name=None, description=None, version=1, verbose_description=False):
     assert len(eta_bin_edges)-1 == len(criteria_expressions), f"Mismatch number of eta bins ({len(eta_bin_edges)-1}) and criteria expression (len(criteria_expressions))"
     
@@ -154,51 +169,78 @@ def create_jetId_correction(eta_bin_edges, criteria_expressions,
             content = create_unit_jetId_correction(unit_str_expr, valid_content=content)
             inputs.append(content.input)
         return inputs, content
-
-    criteria_inputs = ["abs(eta)"]
+    
+    criteria_inputs = list()
+    if not input_abs_eta: # use eta as input
+        criteria_inputs.append("eta")
+    else: # use abs(eta) as input
+        criteria_inputs.append("abs_eta")
     criteria_corrections = list()
     for expr in criteria_expressions:
         inputs, correction = create_jetId_correction_per_eta_bin(expr)
         criteria_inputs += inputs
         criteria_corrections.append(correction)
-    input_names = [name for name in variable_ordering if name in criteria_inputs]
-    inputs = [schema.Variable(name=name, type="real", description=variable_information_dict[name]["description"]) 
-              for name in input_names]
+    input_names = [input_name for input_name in variable_ordering if input_name in criteria_inputs]
+    inputs = [schema.Variable(name=input_name, type="real", description=variable_information_dict[input_name]["description"]) 
+              for input_name in input_names]
     if verbose_description:
         for eta_bin_idx in range(len(eta_bin_edges)-1):
             description += "\n" + f"abs(eta) in [{eta_bin_edges[eta_bin_idx]}, {eta_bin_edges[eta_bin_idx+1]}): " + criteria_expressions[eta_bin_idx]
+
+    data = None
+    if not input_abs_eta: # use eta as input
+        data = schema.Transform(
+            nodetype = "transform",
+            input = "eta",
+            rule = schema.Formula(
+                nodetype = "formula",
+                variables = ["eta"],
+                parser = "TFormula",
+                expression = "abs(x)",
+            ),
+            content = schema.Binning(
+                nodetype = "binning",
+                input = "eta",
+                edges = eta_bin_edges,
+                flow = "error",
+                content = criteria_corrections
+            )
+        )
+    else: # use abs(eta) as input
+        data = schema.Binning(
+            nodetype = "binning",
+            input = "abs(eta)",
+            edges = eta_bin_edges,
+            flow = "error",
+            content = criteria_corrections
+        )
+
     return schema.Correction(
         name = name,
         description = description,
         version = 1,
         inputs = inputs,
         output = schema.Variable(name="jet id", type="real", description="jet identification"),
-        data = schema.Binning(
-            nodetype="binning",
-            input="abs(eta)",
-            edges=eta_bin_edges,
-            flow="error",
-            content=criteria_corrections
-        )
+        data = data
     )
 
 # create a JetID correctionSet for multiple working point (e.g. Tight, TightLeptonVeto) and multiple eras
 # by combining JetID corrections for each working point and each era
-def create_jetId_correctionSet(criteria_tasks, description=""):
+def create_jetId_correctionSet(criteria_tasks, description="", input_abs_eta=False):
     corrections = list()
     for criteria_task in criteria_tasks:
         criteria_task["criteria_expressions"] = [preprocess_expression(_) for _ in criteria_task["criteria_expressions"]]
-        corrections.append(create_jetId_correction(**criteria_task))
+        corrections.append(create_jetId_correction(**criteria_task, input_abs_eta=input_abs_eta))
     return schema.CorrectionSet(
-        schema_version=2,
-        description=description,
-        corrections=corrections,
+        schema_version = 2,
+        description = description,
+        corrections = corrections,
     )
 
 # write correctionSet to a json file
 def write_correctionSet(correctionSet, filename, write_gzip=False):
     with open(filename, "w") as fout:
-        fout.write(correctionSet.json(exclude_unset=True, indent=4))
+        json.dump(correctionSet.dict(exclude_unset=True), fout, indent=4)
     if write_gzip:
         with gzip.open(filename+".gz", "wt") as fout:
-            fout.write(correctionSet.json(exclude_unset=True))
+            json.dump(correctionSet.dict(exclude_unset=True), fout)
