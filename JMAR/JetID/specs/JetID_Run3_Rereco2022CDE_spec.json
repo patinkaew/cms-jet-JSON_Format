@@ -1,10 +1,10 @@
 [
     {
-        "name": "JetID_Run3_Rereco2022CDE_TightLeptonVeto_AK4PFPuppi",
-        "description": "AK4PFPuppi Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE",
+        "name": "AK4PUPPI_TightLeptonVeto",
+        "description": "AK4PUPPI Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE",
         "version": 1,
         "verbose_description": false,
-        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, 5.0], 
+        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, "inf"], 
         "criteria_expressions": [
             "CEMF<0.8 && CHM>0 && CHF>0.01 && NumConst>1 && NEMF<0.9 && MUF<0.8 && NHF<0.99",
             "CEMF<0.8 && NEMF<0.99 && MUF<0.8 && NHF<0.9",
@@ -13,11 +13,11 @@
         ]
     },
     {
-        "name": "JetID_Run3_Rereco2022CDE_Tight_AK4PFPuppi",
-        "description": "AK4PFPuppi Jet Identification Tight Criteria for Run3 Rereco2022CDE",
+        "name": "AK4PUPPI_Tight",
+        "description": "AK4PUPPI Jet Identification Tight Criteria for Run3 Rereco2022CDE",
         "version": 1,
         "verbose_description": false,
-        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, 5.0], 
+        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, "inf"], 
         "criteria_expressions": [
             "CHM>0 && CHF>0.01 && NumConst>1 && NEMF<0.9 && NHF<0.99",
             "NEMF<0.99 && NHF<0.9",
@@ -26,11 +26,11 @@
         ]
     },
     {
-        "name": "JetID_Run3_Rereco2022CDE_TightLeptonVeto_AK4PFCHS",
-        "description": "AK4PFCHS Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE",
+        "name": "AK4CHS_TightLeptonVeto",
+        "description": "AK4CHS Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE",
         "version": 1,
         "verbose_description": false,
-        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, 5.0], 
+        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, "inf"], 
         "criteria_expressions": [
             "CEMF<0.8 && CHM>0 && CHF>0.01 && NumConst>1 && NEMF<0.9 && MUF<0.8 && NHF<0.99",
             "CEMF<0.8 && CHM>0 && NEMF<0.99 && MUF<0.8 && NHF<0.9",
@@ -39,11 +39,11 @@
         ]
     },
     {
-        "name": "JetID_Run3_Rereco2022CDE_Tight_AK4PFCHS",
-        "description": "AK4PFCHS Jet Identification Tight Criteria for Run3 Rereco2022CDE",
+        "name": "AK4CHS_Tight",
+        "description": "AK4CHS Jet Identification Tight Criteria for Run3 Rereco2022CDE",
         "version": 1,
         "verbose_description": false,
-        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, 5.0], 
+        "eta_bin_edges": [0.0, 2.6, 2.7, 3.0, "inf"], 
         "criteria_expressions": [
             "CHM>0 && CHF>0.01 && NumConst>1 && NEMF<0.9 && NHF<0.99",
             "CHM>0 && NEMF<0.99 && NHF<0.9",
