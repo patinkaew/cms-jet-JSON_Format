@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <style>
@@ -6,37 +7,37 @@
 .r2 {color: #000080; text-decoration-color: #000080}
 .r3 {font-weight: bold}
 .r4 {font-style: italic}
+.r6 {color: #800000; text-decoration-color: #800000; font-weight: bold}
 body {
     color: #000000;
     background-color: #ffffff;
 }
 </style>
 </head>
-<html>
 <body>
-    <code>
-        <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span class="r1">────────────────────── </span><span class="r2">Corrections in file json/JetID_Run3_Rereco2022CDE.json</span><span class="r1"> ──────────────────────</span>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">────────────────── </span><span class="r2">Corrections in file corrections/JetID_Run3_Rereco2022CDE.json</span><span class="r1"> ───────────────────</span>
 <span class="r3">CorrectionSet</span> (<span class="r4">schema v2</span>)
 Jet Identification Criteria for Run3 Rereco2022CDE from 
-https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV
+https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV?rev=18
 📂
-<span class="r5">├── </span>📈 <span class="r3">JetID_Run3_Rereco2022CDE_TightLeptonVeto_AK4PFPuppi</span> (v1)
-<span class="r5">│   </span>AK4PFPuppi Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE
-<span class="r5">│   </span>Node counts: <span class="r3">Binning</span>: 15
+<span class="r5">├── </span>📈 <span class="r3">AK4PUPPI_TightLeptonVeto</span> (v1)
+<span class="r5">│   </span>AK4PUPPI Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE
+<span class="r5">│   </span>Node counts: <span class="r3">Transform</span>: 1, <span class="r3">Binning</span>: 15
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
-<span class="r5">│   </span>│ <span class="r3">abs(eta)</span> (real)                             │ │ <span class="r3">chHEF</span> (real)                            │
-<span class="r5">│   </span>│ absolute value of pseudorapidity of the jet │ │ charged Hadron Energy Fraction          │
-<span class="r5">│   </span>│ Range: [0.0, 5.0)                           │ │ Range: [0.0, 1.0)                       │
-<span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                  │ │ <span class="r3">chHEF</span> (real)                            │
+<span class="r5">│   </span>│ pseudorapidity of the jet                   │ │ charged Hadron Energy Fraction          │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
+<span class="r5">│   </span>│ <span class="r6">has transform</span>                               │ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>╰─────────────────────────────────────────────╯                                            
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">neHEF</span> (real)                                │ │ <span class="r3">chEmEF</span> (real)                           │
 <span class="r5">│   </span>│ neutral Hadron Energy Fraction              │ │ charged Electromagnetic Energy Fraction │
-<span class="r5">│   </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">neEmEF</span> (real)                               │ │ <span class="r3">muEF</span> (real)                             │
 <span class="r5">│   </span>│ neutral Electromagnetic Energy Fraction     │ │ muon Energy Fraction                    │
-<span class="r5">│   </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">chMultiplicity</span> (real)                       │ │ <span class="r3">neMultiplicity</span> (real)                   │
@@ -52,18 +53,19 @@ https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV
 <span class="r5">│   </span>│ <span class="r3">jet id</span> (real)      │
 <span class="r5">│   </span>│ jet identification │
 <span class="r5">│   </span>╰────────────────────╯
-<span class="r5">├── </span>📈 <span class="r3">JetID_Run3_Rereco2022CDE_Tight_AK4PFPuppi</span> (v1)
-<span class="r5">│   </span>AK4PFPuppi Jet Identification Tight Criteria for Run3 Rereco2022CDE
-<span class="r5">│   </span>Node counts: <span class="r3">Binning</span>: 11
+<span class="r5">├── </span>📈 <span class="r3">AK4PUPPI_Tight</span> (v1)
+<span class="r5">│   </span>AK4PUPPI Jet Identification Tight Criteria for Run3 Rereco2022CDE
+<span class="r5">│   </span>Node counts: <span class="r3">Transform</span>: 1, <span class="r3">Binning</span>: 11
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
-<span class="r5">│   </span>│ <span class="r3">abs(eta)</span> (real)                             │ │ <span class="r3">chHEF</span> (real)                            │
-<span class="r5">│   </span>│ absolute value of pseudorapidity of the jet │ │ charged Hadron Energy Fraction          │
-<span class="r5">│   </span>│ Range: [0.0, 5.0)                           │ │ Range: [0.0, 1.0)                       │
-<span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                  │ │ <span class="r3">chHEF</span> (real)                            │
+<span class="r5">│   </span>│ pseudorapidity of the jet                   │ │ charged Hadron Energy Fraction          │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
+<span class="r5">│   </span>│ <span class="r6">has transform</span>                               │ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>╰─────────────────────────────────────────────╯                                            
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">neHEF</span> (real)                                │ │ <span class="r3">neEmEF</span> (real)                           │
 <span class="r5">│   </span>│ neutral Hadron Energy Fraction              │ │ neutral Electromagnetic Energy Fraction │
-<span class="r5">│   </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">chMultiplicity</span> (real)                       │ │ <span class="r3">neMultiplicity</span> (real)                   │
@@ -79,23 +81,24 @@ https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV
 <span class="r5">│   </span>│ <span class="r3">jet id</span> (real)      │
 <span class="r5">│   </span>│ jet identification │
 <span class="r5">│   </span>╰────────────────────╯
-<span class="r5">├── </span>📈 <span class="r3">JetID_Run3_Rereco2022CDE_TightLeptonVeto_AK4PFCHS</span> (v1)
-<span class="r5">│   </span>AK4PFCHS Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE
-<span class="r5">│   </span>Node counts: <span class="r3">Binning</span>: 18
+<span class="r5">├── </span>📈 <span class="r3">AK4CHS_TightLeptonVeto</span> (v1)
+<span class="r5">│   </span>AK4CHS Jet Identification TightLeptonVeto Criteria for Run3 Rereco2022CDE
+<span class="r5">│   </span>Node counts: <span class="r3">Transform</span>: 1, <span class="r3">Binning</span>: 18
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
-<span class="r5">│   </span>│ <span class="r3">abs(eta)</span> (real)                             │ │ <span class="r3">chHEF</span> (real)                            │
-<span class="r5">│   </span>│ absolute value of pseudorapidity of the jet │ │ charged Hadron Energy Fraction          │
-<span class="r5">│   </span>│ Range: [0.0, 5.0)                           │ │ Range: [0.0, 1.0)                       │
-<span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                  │ │ <span class="r3">chHEF</span> (real)                            │
+<span class="r5">│   </span>│ pseudorapidity of the jet                   │ │ charged Hadron Energy Fraction          │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
+<span class="r5">│   </span>│ <span class="r6">has transform</span>                               │ ╰─────────────────────────────────────────╯
+<span class="r5">│   </span>╰─────────────────────────────────────────────╯                                            
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">neHEF</span> (real)                                │ │ <span class="r3">chEmEF</span> (real)                           │
 <span class="r5">│   </span>│ neutral Hadron Energy Fraction              │ │ charged Electromagnetic Energy Fraction │
-<span class="r5">│   </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">neEmEF</span> (real)                               │ │ <span class="r3">muEF</span> (real)                             │
 <span class="r5">│   </span>│ neutral Electromagnetic Energy Fraction     │ │ muon Energy Fraction                    │
-<span class="r5">│   </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">│   </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">│   </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">│   </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">│   </span>│ <span class="r3">chMultiplicity</span> (real)                       │ │ <span class="r3">neMultiplicity</span> (real)                   │
@@ -111,18 +114,19 @@ https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV
 <span class="r5">│   </span>│ <span class="r3">jet id</span> (real)      │
 <span class="r5">│   </span>│ jet identification │
 <span class="r5">│   </span>╰────────────────────╯
-<span class="r5">└── </span>📈 <span class="r3">JetID_Run3_Rereco2022CDE_Tight_AK4PFCHS</span> (v1)
-<span class="r5">    </span>AK4PFCHS Jet Identification Tight Criteria for Run3 Rereco2022CDE
-<span class="r5">    </span>Node counts: <span class="r3">Binning</span>: 14
+<span class="r5">└── </span>📈 <span class="r3">AK4CHS_Tight</span> (v1)
+<span class="r5">    </span>AK4CHS Jet Identification Tight Criteria for Run3 Rereco2022CDE
+<span class="r5">    </span>Node counts: <span class="r3">Transform</span>: 1, <span class="r3">Binning</span>: 14
 <span class="r5">    </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
-<span class="r5">    </span>│ <span class="r3">abs(eta)</span> (real)                             │ │ <span class="r3">chHEF</span> (real)                            │
-<span class="r5">    </span>│ absolute value of pseudorapidity of the jet │ │ charged Hadron Energy Fraction          │
-<span class="r5">    </span>│ Range: [0.0, 5.0)                           │ │ Range: [0.0, 1.0)                       │
-<span class="r5">    </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
+<span class="r5">    </span>│ <span class="r3">eta</span> (real)                                  │ │ <span class="r3">chHEF</span> (real)                            │
+<span class="r5">    </span>│ pseudorapidity of the jet                   │ │ charged Hadron Energy Fraction          │
+<span class="r5">    </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
+<span class="r5">    </span>│ <span class="r6">has transform</span>                               │ ╰─────────────────────────────────────────╯
+<span class="r5">    </span>╰─────────────────────────────────────────────╯                                            
 <span class="r5">    </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">    </span>│ <span class="r3">neHEF</span> (real)                                │ │ <span class="r3">neEmEF</span> (real)                           │
 <span class="r5">    </span>│ neutral Hadron Energy Fraction              │ │ neutral Electromagnetic Energy Fraction │
-<span class="r5">    </span>│ Range: [0.0, 1.0)                           │ │ Range: [0.0, 1.0)                       │
+<span class="r5">    </span>│ Range: [0.0, inf)                           │ │ Range: [0.0, inf)                       │
 <span class="r5">    </span>╰─────────────────────────────────────────────╯ ╰─────────────────────────────────────────╯
 <span class="r5">    </span>╭────────────────── ▶ input ──────────────────╮ ╭──────────────── ▶ input ────────────────╮
 <span class="r5">    </span>│ <span class="r3">chMultiplicity</span> (real)                       │ │ <span class="r3">neMultiplicity</span> (real)                   │
@@ -138,7 +142,6 @@ https://twiki.cern.ch/twiki/bin/view/CMS/JetID13p6TeV
 <span class="r5">    </span>│ <span class="r3">jet id</span> (real)      │
 <span class="r5">    </span>│ jet identification │
 <span class="r5">    </span>╰────────────────────╯
-</pre>
-    </code>
+</code></pre>
 </body>
 </html>
