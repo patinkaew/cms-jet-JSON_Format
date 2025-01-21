@@ -77,7 +77,7 @@
                         2.6,
                         2.7,
                         3.0,
-                        "inf"
+                        5.2
                     ],
                     "content": [
                         {
@@ -86,7 +86,7 @@
                             "edges": [
                                 0.0,
                                 0.01,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -96,7 +96,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -105,7 +105,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.8,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -114,7 +114,7 @@
                                                     "edges": [
                                                         0.0,
                                                         0.9,
-                                                        "+inf"
+                                                        1.0
                                                     ],
                                                     "content": [
                                                         {
@@ -123,7 +123,7 @@
                                                             "edges": [
                                                                 0.0,
                                                                 0.8,
-                                                                "+inf"
+                                                                1.0
                                                             ],
                                                             "content": [
                                                                 {
@@ -155,22 +155,22 @@
                                                                 },
                                                                 0.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         },
                                                         0.0
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -178,7 +178,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -187,7 +187,7 @@
                                     "edges": [
                                         0.0,
                                         0.8,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -196,7 +196,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.99,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -205,25 +205,25 @@
                                                     "edges": [
                                                         0.0,
                                                         0.8,
-                                                        "+inf"
+                                                        1.0
                                                     ],
                                                     "content": [
                                                         1.0,
                                                         0.0
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -231,13 +231,13 @@
                             "edges": [
                                 0.0,
                                 0.9999,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 1.0,
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -245,7 +245,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -264,10 +264,10 @@
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         }
                     ],
-                    "flow": "error"
+                    "flow": "clamp"
                 }
             }
         },
@@ -336,7 +336,7 @@
                         2.6,
                         2.7,
                         3.0,
-                        "inf"
+                        5.2
                     ],
                     "content": [
                         {
@@ -345,7 +345,7 @@
                             "edges": [
                                 0.0,
                                 0.01,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -355,7 +355,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -364,7 +364,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.9,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -396,14 +396,14 @@
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -411,7 +411,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -420,17 +420,17 @@
                                     "edges": [
                                         0.0,
                                         0.99,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         1.0,
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -438,13 +438,13 @@
                             "edges": [
                                 0.0,
                                 0.9999,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 1.0,
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -452,7 +452,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -471,10 +471,10 @@
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         }
                     ],
-                    "flow": "error"
+                    "flow": "clamp"
                 }
             }
         },
@@ -553,7 +553,7 @@
                         2.6,
                         2.7,
                         3.0,
-                        "inf"
+                        5.2
                     ],
                     "content": [
                         {
@@ -562,7 +562,7 @@
                             "edges": [
                                 0.0,
                                 0.01,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -572,7 +572,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -581,7 +581,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.8,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -590,7 +590,7 @@
                                                     "edges": [
                                                         0.0,
                                                         0.9,
-                                                        "+inf"
+                                                        1.0
                                                     ],
                                                     "content": [
                                                         {
@@ -599,7 +599,7 @@
                                                             "edges": [
                                                                 0.0,
                                                                 0.8,
-                                                                "+inf"
+                                                                1.0
                                                             ],
                                                             "content": [
                                                                 {
@@ -631,22 +631,22 @@
                                                                 },
                                                                 0.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         },
                                                         0.0
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -654,7 +654,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -663,7 +663,7 @@
                                     "edges": [
                                         0.0,
                                         0.8,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -672,7 +672,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.99,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -681,7 +681,7 @@
                                                     "edges": [
                                                         0.0,
                                                         0.8,
-                                                        "+inf"
+                                                        1.0
                                                     ],
                                                     "content": [
                                                         {
@@ -700,19 +700,19 @@
                                                         },
                                                         0.0
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -720,7 +720,7 @@
                             "edges": [
                                 0.0,
                                 0.99,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -739,7 +739,7 @@
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -747,7 +747,7 @@
                             "edges": [
                                 0.0,
                                 0.2,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -757,7 +757,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -776,13 +776,13 @@
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         }
                     ],
-                    "flow": "error"
+                    "flow": "clamp"
                 }
             }
         },
@@ -851,7 +851,7 @@
                         2.6,
                         2.7,
                         3.0,
-                        "inf"
+                        5.2
                     ],
                     "content": [
                         {
@@ -860,7 +860,7 @@
                             "edges": [
                                 0.0,
                                 0.01,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -870,7 +870,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -879,7 +879,7 @@
                                             "edges": [
                                                 0.0,
                                                 0.9,
-                                                "+inf"
+                                                1.0
                                             ],
                                             "content": [
                                                 {
@@ -911,14 +911,14 @@
                                                 },
                                                 0.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -926,7 +926,7 @@
                             "edges": [
                                 0.0,
                                 0.9,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -935,7 +935,7 @@
                                     "edges": [
                                         0.0,
                                         0.99,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -954,11 +954,11 @@
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -966,7 +966,7 @@
                             "edges": [
                                 0.0,
                                 0.99,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 {
@@ -985,7 +985,7 @@
                                 },
                                 0.0
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         },
                         {
                             "nodetype": "binning",
@@ -993,7 +993,7 @@
                             "edges": [
                                 0.0,
                                 0.2,
-                                "+inf"
+                                1.0
                             ],
                             "content": [
                                 0.0,
@@ -1003,7 +1003,7 @@
                                     "edges": [
                                         0.0,
                                         0.9,
-                                        "+inf"
+                                        1.0
                                     ],
                                     "content": [
                                         {
@@ -1022,13 +1022,1043 @@
                                         },
                                         0.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 }
                             ],
-                            "flow": "error"
+                            "flow": "clamp"
                         }
                     ],
-                    "flow": "error"
+                    "flow": "clamp"
+                }
+            }
+        },
+        {
+            "name": "AK8PUPPI_TightLeptonVeto",
+            "description": "AK8PUPPI Jet Identification TightLeptonVeto Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "chEmEF",
+                    "type": "real",
+                    "description": "charged Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "muEF",
+                    "type": "real",
+                    "description": "muon Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "transform",
+                "input": "eta",
+                "rule": {
+                    "nodetype": "formula",
+                    "expression": "abs(x)",
+                    "parser": "TFormula",
+                    "variables": [
+                        "eta"
+                    ]
+                },
+                "content": {
+                    "nodetype": "binning",
+                    "input": "eta",
+                    "edges": [
+                        0.0,
+                        2.6,
+                        2.7,
+                        3.0,
+                        5.2
+                    ],
+                    "content": [
+                        {
+                            "nodetype": "binning",
+                            "input": "chHEF",
+                            "edges": [
+                                0.0,
+                                0.01,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neHEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "chEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.8,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "neEmEF",
+                                                    "edges": [
+                                                        0.0,
+                                                        0.9,
+                                                        1.0
+                                                    ],
+                                                    "content": [
+                                                        {
+                                                            "nodetype": "binning",
+                                                            "input": "muEF",
+                                                            "edges": [
+                                                                0.0,
+                                                                0.8,
+                                                                1.0
+                                                            ],
+                                                            "content": [
+                                                                {
+                                                                    "nodetype": "binning",
+                                                                    "input": "chMultiplicity",
+                                                                    "edges": [
+                                                                        0.0,
+                                                                        1.0,
+                                                                        "+inf"
+                                                                    ],
+                                                                    "content": [
+                                                                        0.0,
+                                                                        {
+                                                                            "nodetype": "binning",
+                                                                            "input": "multiplicity",
+                                                                            "edges": [
+                                                                                0.0,
+                                                                                2.0,
+                                                                                "+inf"
+                                                                            ],
+                                                                            "content": [
+                                                                                0.0,
+                                                                                1.0
+                                                                            ],
+                                                                            "flow": "error"
+                                                                        }
+                                                                    ],
+                                                                    "flow": "error"
+                                                                },
+                                                                0.0
+                                                            ],
+                                                            "flow": "clamp"
+                                                        },
+                                                        0.0
+                                                    ],
+                                                    "flow": "clamp"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "chEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.8,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.99,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "muEF",
+                                                    "edges": [
+                                                        0.0,
+                                                        0.8,
+                                                        1.0
+                                                    ],
+                                                    "content": [
+                                                        1.0,
+                                                        0.0
+                                                    ],
+                                                    "flow": "clamp"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9999,
+                                1.0
+                            ],
+                            "content": [
+                                1.0,
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neEmEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neMultiplicity",
+                                    "edges": [
+                                        0.0,
+                                        3.0,
+                                        "+inf"
+                                    ],
+                                    "content": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "flow": "error"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        }
+                    ],
+                    "flow": "clamp"
+                }
+            }
+        },
+        {
+            "name": "AK8PUPPI_Tight",
+            "description": "AK8PUPPI Jet Identification Tight Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "transform",
+                "input": "eta",
+                "rule": {
+                    "nodetype": "formula",
+                    "expression": "abs(x)",
+                    "parser": "TFormula",
+                    "variables": [
+                        "eta"
+                    ]
+                },
+                "content": {
+                    "nodetype": "binning",
+                    "input": "eta",
+                    "edges": [
+                        0.0,
+                        2.6,
+                        2.7,
+                        3.0,
+                        5.2
+                    ],
+                    "content": [
+                        {
+                            "nodetype": "binning",
+                            "input": "chHEF",
+                            "edges": [
+                                0.0,
+                                0.01,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neHEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.9,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "chMultiplicity",
+                                                    "edges": [
+                                                        0.0,
+                                                        1.0,
+                                                        "+inf"
+                                                    ],
+                                                    "content": [
+                                                        0.0,
+                                                        {
+                                                            "nodetype": "binning",
+                                                            "input": "multiplicity",
+                                                            "edges": [
+                                                                0.0,
+                                                                2.0,
+                                                                "+inf"
+                                                            ],
+                                                            "content": [
+                                                                0.0,
+                                                                1.0
+                                                            ],
+                                                            "flow": "error"
+                                                        }
+                                                    ],
+                                                    "flow": "error"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.99,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        1.0,
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9999,
+                                1.0
+                            ],
+                            "content": [
+                                1.0,
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neEmEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neMultiplicity",
+                                    "edges": [
+                                        0.0,
+                                        3.0,
+                                        "+inf"
+                                    ],
+                                    "content": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "flow": "error"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        }
+                    ],
+                    "flow": "clamp"
+                }
+            }
+        },
+        {
+            "name": "AK8CHS_TightLeptonVeto",
+            "description": "AK8CHS Jet Identification TightLeptonVeto Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "chEmEF",
+                    "type": "real",
+                    "description": "charged Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "muEF",
+                    "type": "real",
+                    "description": "muon Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "transform",
+                "input": "eta",
+                "rule": {
+                    "nodetype": "formula",
+                    "expression": "abs(x)",
+                    "parser": "TFormula",
+                    "variables": [
+                        "eta"
+                    ]
+                },
+                "content": {
+                    "nodetype": "binning",
+                    "input": "eta",
+                    "edges": [
+                        0.0,
+                        2.6,
+                        2.7,
+                        3.0,
+                        5.2
+                    ],
+                    "content": [
+                        {
+                            "nodetype": "binning",
+                            "input": "chHEF",
+                            "edges": [
+                                0.0,
+                                0.01,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neHEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "chEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.8,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "neEmEF",
+                                                    "edges": [
+                                                        0.0,
+                                                        0.9,
+                                                        1.0
+                                                    ],
+                                                    "content": [
+                                                        {
+                                                            "nodetype": "binning",
+                                                            "input": "muEF",
+                                                            "edges": [
+                                                                0.0,
+                                                                0.8,
+                                                                1.0
+                                                            ],
+                                                            "content": [
+                                                                {
+                                                                    "nodetype": "binning",
+                                                                    "input": "chMultiplicity",
+                                                                    "edges": [
+                                                                        0.0,
+                                                                        1.0,
+                                                                        "+inf"
+                                                                    ],
+                                                                    "content": [
+                                                                        0.0,
+                                                                        {
+                                                                            "nodetype": "binning",
+                                                                            "input": "multiplicity",
+                                                                            "edges": [
+                                                                                0.0,
+                                                                                2.0,
+                                                                                "+inf"
+                                                                            ],
+                                                                            "content": [
+                                                                                0.0,
+                                                                                1.0
+                                                                            ],
+                                                                            "flow": "error"
+                                                                        }
+                                                                    ],
+                                                                    "flow": "error"
+                                                                },
+                                                                0.0
+                                                            ],
+                                                            "flow": "clamp"
+                                                        },
+                                                        0.0
+                                                    ],
+                                                    "flow": "clamp"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "chEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.8,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.99,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "muEF",
+                                                    "edges": [
+                                                        0.0,
+                                                        0.8,
+                                                        1.0
+                                                    ],
+                                                    "content": [
+                                                        {
+                                                            "nodetype": "binning",
+                                                            "input": "chMultiplicity",
+                                                            "edges": [
+                                                                0.0,
+                                                                1.0,
+                                                                "+inf"
+                                                            ],
+                                                            "content": [
+                                                                0.0,
+                                                                1.0
+                                                            ],
+                                                            "flow": "error"
+                                                        },
+                                                        0.0
+                                                    ],
+                                                    "flow": "clamp"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neEmEF",
+                            "edges": [
+                                0.0,
+                                0.99,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neMultiplicity",
+                                    "edges": [
+                                        0.0,
+                                        2.0,
+                                        "+inf"
+                                    ],
+                                    "content": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "flow": "error"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.2,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neMultiplicity",
+                                            "edges": [
+                                                0.0,
+                                                11.0,
+                                                "+inf"
+                                            ],
+                                            "content": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "flow": "error"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        }
+                    ],
+                    "flow": "clamp"
+                }
+            }
+        },
+        {
+            "name": "AK8CHS_Tight",
+            "description": "AK8CHS Jet Identification Tight Criteria for Run3 Prompt2022CDE",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "pseudorapidity of the jet"
+                },
+                {
+                    "name": "chHEF",
+                    "type": "real",
+                    "description": "charged Hadron Energy Fraction"
+                },
+                {
+                    "name": "neHEF",
+                    "type": "real",
+                    "description": "neutral Hadron Energy Fraction"
+                },
+                {
+                    "name": "neEmEF",
+                    "type": "real",
+                    "description": "neutral Electromagnetic Energy Fraction"
+                },
+                {
+                    "name": "chMultiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity"
+                },
+                {
+                    "name": "neMultiplicity",
+                    "type": "real",
+                    "description": "neutral Multiplicity"
+                },
+                {
+                    "name": "multiplicity",
+                    "type": "real",
+                    "description": "charged Multiplicity + neutral Multiplicity"
+                }
+            ],
+            "output": {
+                "name": "jet id",
+                "type": "real",
+                "description": "jet identification"
+            },
+            "data": {
+                "nodetype": "transform",
+                "input": "eta",
+                "rule": {
+                    "nodetype": "formula",
+                    "expression": "abs(x)",
+                    "parser": "TFormula",
+                    "variables": [
+                        "eta"
+                    ]
+                },
+                "content": {
+                    "nodetype": "binning",
+                    "input": "eta",
+                    "edges": [
+                        0.0,
+                        2.6,
+                        2.7,
+                        3.0,
+                        5.2
+                    ],
+                    "content": [
+                        {
+                            "nodetype": "binning",
+                            "input": "chHEF",
+                            "edges": [
+                                0.0,
+                                0.01,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neHEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neEmEF",
+                                            "edges": [
+                                                0.0,
+                                                0.9,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "binning",
+                                                    "input": "chMultiplicity",
+                                                    "edges": [
+                                                        0.0,
+                                                        1.0,
+                                                        "+inf"
+                                                    ],
+                                                    "content": [
+                                                        0.0,
+                                                        {
+                                                            "nodetype": "binning",
+                                                            "input": "multiplicity",
+                                                            "edges": [
+                                                                0.0,
+                                                                2.0,
+                                                                "+inf"
+                                                            ],
+                                                            "content": [
+                                                                0.0,
+                                                                1.0
+                                                            ],
+                                                            "flow": "error"
+                                                        }
+                                                    ],
+                                                    "flow": "error"
+                                                },
+                                                0.0
+                                            ],
+                                            "flow": "clamp"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.9,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.99,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "chMultiplicity",
+                                            "edges": [
+                                                0.0,
+                                                1.0,
+                                                "+inf"
+                                            ],
+                                            "content": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "flow": "error"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neEmEF",
+                            "edges": [
+                                0.0,
+                                0.99,
+                                1.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neMultiplicity",
+                                    "edges": [
+                                        0.0,
+                                        2.0,
+                                        "+inf"
+                                    ],
+                                    "content": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "flow": "error"
+                                },
+                                0.0
+                            ],
+                            "flow": "clamp"
+                        },
+                        {
+                            "nodetype": "binning",
+                            "input": "neHEF",
+                            "edges": [
+                                0.0,
+                                0.2,
+                                1.0
+                            ],
+                            "content": [
+                                0.0,
+                                {
+                                    "nodetype": "binning",
+                                    "input": "neEmEF",
+                                    "edges": [
+                                        0.0,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "neMultiplicity",
+                                            "edges": [
+                                                0.0,
+                                                11.0,
+                                                "+inf"
+                                            ],
+                                            "content": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "flow": "error"
+                                        },
+                                        0.0
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "clamp"
+                        }
+                    ],
+                    "flow": "clamp"
                 }
             }
         }
