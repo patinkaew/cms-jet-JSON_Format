@@ -11,52 +11,55 @@ variable_information_dict = {
     "eta": {
         "description": "pseudorapidity of the jet",
         "type": "real",
-        "range": (-np.inf, np.inf), # cannot use upperbound 5.0 since correctionlib will use [-5.0, 5.0), disallowing input=5.0
+        "range": (-5.2, 5.2),
     },
     "abs_eta": {
         "description": "absolute value of pseudorapidity of the jet",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 5.0 since correctionlib will use [0.0, 5.0), disallowing input=5.0
+        "range": (0.0, 5.2),
     },
     "chHEF": {
         "description": "charged Hadron Energy Fraction",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, 1.0),
     },
     "neHEF": {
         "description": "neutral Hadron Energy Fraction",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, 1.0),
     },
     "chEmEF": {
         "description": "charged Electromagnetic Energy Fraction",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, 1.0),
     },
     "neEmEF": {
         "description": "neutral Electromagnetic Energy Fraction",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, 1.0),
     },
     "muEF": {
         "description": "muon Energy Fraction",
         "type": "real",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, 1.0),
     },
     "chMultiplicity": {
         "description": "charged Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, np.inf),
+        "flow": "error",
     },
     "neMultiplicity": {
         "description": "neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, np.inf),
+        "flow": "error",
     },
     "multiplicity": {
         "description": "charged Multiplicity + neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf), # cannot use upperbound 1.0 since correctionlib will use [0.0, 1.0), disallowing input=1.0
+        "range": (0.0, np.inf),
+        "flow": "error",
     },
 }
 
@@ -73,6 +76,17 @@ legacy_to_nanoaod_name_map = {
     "NumNeutralParticle": "neMultiplicity",
     "NumConst": "multiplicity",
 }
+
+# flow option to use
+flow_option = "clamp"
+
+# change +- np.inf to "+inf"/"-inf" string
+def inf2str(value):
+    if np.isposinf(value):
+        return "+inf"
+    elif np.isneginf(value):
+        return "-inf"
+    return value
 
 # split unit expression by comparison operator
 # e.g. split "NHF>0.9" to "NHF", ">", "0.9"
@@ -140,18 +154,11 @@ def create_unit_jetId_correction(string_expression, valid_content=1):
     elif comparison_operator == ">" or comparison_operator == ">=":
         content = [0.0, valid_content]
 
-    def inf2str(value):
-        if np.isposinf(value):
-            return "+inf"
-        elif np.isneginf(value):
-            return "-inf"
-        return value
-
     return schema.Binning(
         nodetype = "binning",
         input = var_name,
         edges = [inf2str(var_min_value), var_threshold_value, inf2str(var_max_value)],
-        flow = "error",
+        flow = variable_information_dict[var_name].get("flow", flow_option),
         content = content,
     )
 
@@ -202,7 +209,7 @@ def create_jetId_correction(eta_bin_edges, criteria_expressions,
                 nodetype = "binning",
                 input = "eta",
                 edges = eta_bin_edges,
-                flow = "error",
+                flow = variable_information_dict["eta"].get("flow", flow_option),
                 content = criteria_corrections
             )
         )
@@ -211,7 +218,7 @@ def create_jetId_correction(eta_bin_edges, criteria_expressions,
             nodetype = "binning",
             input = "abs(eta)",
             edges = eta_bin_edges,
-            flow = "error",
+            flow = variable_information_dict["abs_eta"].get("flow", flow_option),
             content = criteria_corrections
         )
 
