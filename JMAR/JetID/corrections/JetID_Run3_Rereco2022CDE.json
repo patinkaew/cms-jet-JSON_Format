@@ -132,7 +132,7 @@
                                                                     "edges": [
                                                                         0.0,
                                                                         1.0,
-                                                                        "+inf"
+                                                                        99999.0
                                                                     ],
                                                                     "content": [
                                                                         0.0,
@@ -142,16 +142,16 @@
                                                                             "edges": [
                                                                                 0.0,
                                                                                 2.0,
-                                                                                "+inf"
+                                                                                99999.0
                                                                             ],
                                                                             "content": [
                                                                                 0.0,
                                                                                 1.0
                                                                             ],
-                                                                            "flow": "error"
+                                                                            "flow": "clamp"
                                                                         }
                                                                     ],
-                                                                    "flow": "error"
+                                                                    "flow": "clamp"
                                                                 },
                                                                 0.0
                                                             ],
@@ -254,13 +254,13 @@
                                     "edges": [
                                         0.0,
                                         2.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -373,7 +373,7 @@
                                                     "edges": [
                                                         0.0,
                                                         1.0,
-                                                        "+inf"
+                                                        99999.0
                                                     ],
                                                     "content": [
                                                         0.0,
@@ -383,16 +383,16 @@
                                                             "edges": [
                                                                 0.0,
                                                                 2.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         }
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
@@ -461,13 +461,13 @@
                                     "edges": [
                                         0.0,
                                         2.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -608,7 +608,7 @@
                                                                     "edges": [
                                                                         0.0,
                                                                         1.0,
-                                                                        "+inf"
+                                                                        99999.0
                                                                     ],
                                                                     "content": [
                                                                         0.0,
@@ -618,16 +618,16 @@
                                                                             "edges": [
                                                                                 0.0,
                                                                                 2.0,
-                                                                                "+inf"
+                                                                                99999.0
                                                                             ],
                                                                             "content": [
                                                                                 0.0,
                                                                                 1.0
                                                                             ],
-                                                                            "flow": "error"
+                                                                            "flow": "clamp"
                                                                         }
                                                                     ],
-                                                                    "flow": "error"
+                                                                    "flow": "clamp"
                                                                 },
                                                                 0.0
                                                             ],
@@ -690,13 +690,13 @@
                                                             "edges": [
                                                                 0.0,
                                                                 1.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         },
                                                         0.0
                                                     ],
@@ -738,13 +738,13 @@
                                             "edges": [
                                                 0.0,
                                                 2.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -769,13 +769,13 @@
                                     "edges": [
                                         0.0,
                                         11.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -888,7 +888,7 @@
                                                     "edges": [
                                                         0.0,
                                                         1.0,
-                                                        "+inf"
+                                                        99999.0
                                                     ],
                                                     "content": [
                                                         0.0,
@@ -898,16 +898,16 @@
                                                             "edges": [
                                                                 0.0,
                                                                 2.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         }
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
@@ -944,13 +944,13 @@
                                             "edges": [
                                                 0.0,
                                                 1.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -984,13 +984,13 @@
                                             "edges": [
                                                 0.0,
                                                 2.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -1015,13 +1015,13 @@
                                     "edges": [
                                         0.0,
                                         11.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -1162,7 +1162,7 @@
                                                                     "edges": [
                                                                         0.0,
                                                                         1.0,
-                                                                        "+inf"
+                                                                        99999.0
                                                                     ],
                                                                     "content": [
                                                                         0.0,
@@ -1172,16 +1172,16 @@
                                                                             "edges": [
                                                                                 0.0,
                                                                                 2.0,
-                                                                                "+inf"
+                                                                                99999.0
                                                                             ],
                                                                             "content": [
                                                                                 0.0,
                                                                                 1.0
                                                                             ],
-                                                                            "flow": "error"
+                                                                            "flow": "clamp"
                                                                         }
                                                                     ],
-                                                                    "flow": "error"
+                                                                    "flow": "clamp"
                                                                 },
                                                                 0.0
                                                             ],
@@ -1284,13 +1284,13 @@
                                     "edges": [
                                         0.0,
                                         2.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -1403,7 +1403,7 @@
                                                     "edges": [
                                                         0.0,
                                                         1.0,
-                                                        "+inf"
+                                                        99999.0
                                                     ],
                                                     "content": [
                                                         0.0,
@@ -1413,16 +1413,16 @@
                                                             "edges": [
                                                                 0.0,
                                                                 2.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         }
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
@@ -1491,13 +1491,13 @@
                                     "edges": [
                                         0.0,
                                         2.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -1638,7 +1638,7 @@
                                                                     "edges": [
                                                                         0.0,
                                                                         1.0,
-                                                                        "+inf"
+                                                                        99999.0
                                                                     ],
                                                                     "content": [
                                                                         0.0,
@@ -1648,16 +1648,16 @@
                                                                             "edges": [
                                                                                 0.0,
                                                                                 2.0,
-                                                                                "+inf"
+                                                                                99999.0
                                                                             ],
                                                                             "content": [
                                                                                 0.0,
                                                                                 1.0
                                                                             ],
-                                                                            "flow": "error"
+                                                                            "flow": "clamp"
                                                                         }
                                                                     ],
-                                                                    "flow": "error"
+                                                                    "flow": "clamp"
                                                                 },
                                                                 0.0
                                                             ],
@@ -1720,13 +1720,13 @@
                                                             "edges": [
                                                                 0.0,
                                                                 1.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         },
                                                         0.0
                                                     ],
@@ -1768,13 +1768,13 @@
                                             "edges": [
                                                 0.0,
                                                 2.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -1799,13 +1799,13 @@
                                     "edges": [
                                         0.0,
                                         11.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],
@@ -1918,7 +1918,7 @@
                                                     "edges": [
                                                         0.0,
                                                         1.0,
-                                                        "+inf"
+                                                        99999.0
                                                     ],
                                                     "content": [
                                                         0.0,
@@ -1928,16 +1928,16 @@
                                                             "edges": [
                                                                 0.0,
                                                                 2.0,
-                                                                "+inf"
+                                                                99999.0
                                                             ],
                                                             "content": [
                                                                 0.0,
                                                                 1.0
                                                             ],
-                                                            "flow": "error"
+                                                            "flow": "clamp"
                                                         }
                                                     ],
-                                                    "flow": "error"
+                                                    "flow": "clamp"
                                                 },
                                                 0.0
                                             ],
@@ -1974,13 +1974,13 @@
                                             "edges": [
                                                 0.0,
                                                 1.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -2014,13 +2014,13 @@
                                             "edges": [
                                                 0.0,
                                                 2.0,
-                                                "+inf"
+                                                99999.0
                                             ],
                                             "content": [
                                                 0.0,
                                                 1.0
                                             ],
-                                            "flow": "error"
+                                            "flow": "clamp"
                                         },
                                         0.0
                                     ],
@@ -2045,13 +2045,13 @@
                                     "edges": [
                                         0.0,
                                         11.0,
-                                        "+inf"
+                                        99999.0
                                     ],
                                     "content": [
                                         0.0,
                                         1.0
                                     ],
-                                    "flow": "error"
+                                    "flow": "clamp"
                                 },
                                 0.0
                             ],

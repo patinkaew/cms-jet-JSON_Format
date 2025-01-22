@@ -46,20 +46,20 @@ variable_information_dict = {
     "chMultiplicity": {
         "description": "charged Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
-        "flow": "error",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
+        "flow": "clamp",
     },
     "neMultiplicity": {
         "description": "neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
-        "flow": "error",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
+        "flow": "clamp",
     },
     "multiplicity": {
         "description": "charged Multiplicity + neutral Multiplicity",
         "type": "int",
-        "range": (0.0, np.inf),
-        "flow": "error",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
+        "flow": "clamp",
     },
 }
 
@@ -78,7 +78,7 @@ legacy_to_nanoaod_name_map = {
 }
 
 # flow option to use
-flow_option = "clamp"
+flow_option = "clamp" # use clamp to handle open bound on upperbound of binning node
 
 # change +- np.inf to "+inf"/"-inf" string
 def inf2str(value):
@@ -188,7 +188,7 @@ def create_jetId_correction(eta_bin_edges, criteria_expressions,
         criteria_inputs += inputs
         criteria_corrections.append(correction)
     input_names = [input_name for input_name in variable_ordering if input_name in criteria_inputs]
-    inputs = [schema.Variable(name=input_name, type="real", description=variable_information_dict[input_name]["description"]) 
+    inputs = [schema.Variable(name=input_name, type="real", description=variable_information_dict[input_name]["description"]) # need to use type="real"
               for input_name in input_names]
     if verbose_description:
         for eta_bin_idx in range(len(eta_bin_edges)-1):
