@@ -46,20 +46,20 @@ variable_information_dict = {
     "chMultiplicity": {
         "description": "charged Multiplicity",
         "type": "int",
-        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
-        "flow": "clamp",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 for now
+        "flow": "error",
     },
     "neMultiplicity": {
         "description": "neutral Multiplicity",
         "type": "int",
-        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
-        "flow": "clamp",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 for now
+        "flow": "error",
     },
     "multiplicity": {
         "description": "charged Multiplicity + neutral Multiplicity",
         "type": "int",
-        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 and flow=clamp for now
-        "flow": "clamp",
+        "range": (0, 99999), # different syntax for infinity in correctionlib <2.6.0 and >=2.6.0 so use 99999 for now
+        "flow": "error",
     },
 }
 
